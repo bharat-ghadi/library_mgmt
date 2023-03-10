@@ -1,0 +1,33 @@
+{% extends 'index.html'  %}
+
+{% block content %}
+
+
+<div class="container-fluid">
+    <h4 class="container text-center"> Add New User </h4>
+    <div class="container ">
+        <form action="" method="post">
+            {% csrf_token%}
+            <label for="fname" class="form-label">First Name</label>
+            <input id="fname" name="fname" value="{{fname}}" class="form-control">
+
+            <label for="lname" class="form-label">Last Name</label>
+            <input id="lname" name="lname" value="{{lname}}" class="form-control">
+
+            <label for="contact" class="form-label">Contact</label>
+            <input id="contact" name="contact" value="{{contact}}" class="form-control">
+
+            <label for="address" class="form-label">Address</label>
+            <input id="address" name="address" value="{{address}}" class="form-control">
+
+            <label for="membership" class="form-label">Membership Status</label>
+            <input id="membership" name="membership" value="{{membership}}" class="form-control">
+            <br>
+
+            <button type="submit" class="btn btn-secondary"> Submit</button>
+
+
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'index.html'  %}
+
+{% block content %}
+
+
+<div class="container-fluid">
+    <h4 class="container text-center"> Add New Records </h4>
+    <div class="container ">
+        <form action="" method="post">
+            {% csrf_token%}
+            <label for="user" class="form-label">User Id</label>
+            <input id="user" name="user" value="{{user}}" class="form-control">
+
+            <label for="book" class="form-label">Book Id</label>
+            <input id="book" name="book" value="{{book}}" class="form-control">
+
+            <label for="dt_taken" class="form-label">Date Taken</label>
+            <input id="dt_taken" name="dt_taken" value="{{dt_taken}}" class="form-control">
+
+            <label for="dt_returned" class="form-label">Date returned</label>
+            <input id="dt_returned" name="dt_returned" value="{{dt_returned}}" class="form-control">
+
+            <label for="bk_status" class="form-label">Book Status</label>
+            <input id="bk_status" name="bk_status" value="{{bk_status}}" class="form-control">
+            <br>
+
+            <button type="submit" class="btn btn-secondary"> Submit</button>
+
+
+        </form>
+    </div>
+</div>
+{% endblock %}
